@@ -25,7 +25,7 @@
     "transpile": "rm -rf build/olgm && mkdirp build && buble --input src/olgm --output build/olgm --no modules --sourcemap",
     "apidoc": "jsdoc config/jsdoc/api/index.md -c config/jsdoc/api/conf.json -P package.json -d build/apidoc",
     "publish": "npm run build-package && npm publish build/olgm",
-    "prepare": "npm run build-package"
+    "prepare": "npm run transpile && npm run copy-css && node tasks/prepare-package && mv build/olgm/* ."
   },
   "main": "index.js",
   "repository": {

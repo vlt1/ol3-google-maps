@@ -1,1 +1,8 @@
+/build/
 /coverage/
+/changelog/
+/config/
+/examples/
+/src/
+/tasks/
+/test/
